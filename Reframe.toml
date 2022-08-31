@@ -1,0 +1,47 @@
+[reframe]
+name = "web-profile"
+author = "r@ansvia.com"
+min_version = "0.5.1"
+
+[project]
+name = "My profile"
+version = "0.1.0"
+ignore_dirs = [
+  "target",
+  "build",
+  ".next",
+  "node_modules"
+]
+ignore_files = [
+  ".flutter-plugins",
+  ".packages",
+  "*.iml"
+]
+finish_text = """Usage:
+    $ cd $name_kebab_case$
+
+Setup:
+    $ yarn
+
+To run (development):
+    $ yarn dev
+"""
+
+[[param]]
+full_name = { ask = "Nama lengkap ?", default="Budi Suharto" }
+
+[[param]]
+description = { ask = "Deskripsi ?", default="Saya adalah anak pintar" }
+
+[[param]]
+with_hobby_reading = { ask = "Apakah kamu hobby membaca?", default = "true" }
+
+[[param]]
+with_hobby_berhitung = { ask = "Apakah kamu hobby berhitung?", default = "true" }
+
+[[param]]
+with_hobby_coding = { ask = "Apakah kamu hobby coding?", default = "true" }
+
+[[param]]
+with_hobby_writing = { ask = "Apakah kamu hobby menulis?", default = "true" }
+

@@ -12,8 +12,8 @@ const Home: NextPage = () => {
   return (
     <div className={`${styles.container} pt-16 md:pt-0`}>
       <Head>
-        <title>web-profile</title>
-        <meta name="description" content="Web profile template" />
+        <title>$param.full_name$</title>
+        <meta name="description" content="Web profile $name$" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -53,12 +53,11 @@ const BasicProfileInfo: FC = () => {
         <div className="flex flex-col justify-left items-start text-left">
           <h1>Halo, nama saya</h1>
           <div className="profile-name text-5xl md:text-3xl font-extrabold">
-            Arshaka Virendra Shafwan.
+            $param.full_name$
           </div>
 
           <p className="w-96">
-            Aku lahir di Yogyakarta pada X X X, saat ini aku
-            belajar coding di Neuversity School of Sofware Engineering.
+            $param.description$
           </p>
         </div>
       </div>
@@ -76,10 +75,18 @@ const Hobby: FC = () => {
       </div>
 
       <div className="flex">
+        {{#if with_hobby_reading}}
         <HobbyIcon caption="Membaca" src="child-reading.svg" />
+        {{/if}}
+        {{#if with_hobby_berhitung}}
         <HobbyIcon caption="Berhitung" src="icon-berhitung.svg" />
+        {{/if}}
+        {{#if with_hobby_coding}}
         <HobbyIcon caption="Koding" src="icon-ngoding.svg" />
+        {{/if}}
+        {{#if with_hobby_writing}}
         <HobbyIcon caption="Menulis" src="icon-checklist.svg" />
+        {{/if}}
       </div>
     </div>
   );
