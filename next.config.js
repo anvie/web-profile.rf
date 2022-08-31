@@ -5,6 +5,8 @@ const dotenv = require("dotenv");
 
 dotenv.config({ path: ".env" });
 
+const basePath = (process.env.NODE_ENV === "development" ? "" : "$base_path$");
+
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
@@ -17,8 +19,12 @@ const nextConfig = {
     jwtSecret: process.env.JWT_SECRET,
     jwtSecretUser: process.env.JWT_SECRET_USER,
   },
+  publicRuntimeConfig: {
+    basePath,
+  },
   env: {
-  }
+  },
+  basePath
 };
 
 module.exports = nextConfig;

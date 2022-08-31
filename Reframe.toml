@@ -45,3 +45,5 @@ with_hobby_coding = { ask = "Apakah kamu hobby coding?", default = "true" }
 [[param]]
 with_hobby_writing = { ask = "Apakah kamu hobby menulis?", default = "true" }
 
+[[param]]
+base_path = { ask = "Base path ?", default = "" }
