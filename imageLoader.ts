@@ -1,10 +1,13 @@
-
 import getConfig from "next/config";
 
 const { publicRuntimeConfig } = getConfig();
 
-function imageLoader({ src }) {
+interface Props {
+  src: string;
+}
+
+const imageLoader = ({ src }: Props) => {
   return `${publicRuntimeConfig.basePath}/img/${src}`; // REPLACE WITH YOUR IMAGE DIRECTORY
 }
 
-module.exports = imageLoader;
+export default imageLoader;
