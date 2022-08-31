@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 
 dotenv.config({ path: ".env" });
 
-const basePath = (process.env.NODE_ENV === "development" ? "" : "$base_path$");
+const basePath = (process.env.NODE_ENV === "development" ? "" : "$param.base_path$");
 
 const nextConfig = {
   reactStrictMode: true,
