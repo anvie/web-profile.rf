@@ -37,7 +37,7 @@ const BasicProfileInfo: FC = () => {
     <div className="flex flex-col md:flex-row p-4 md:p-10 md:w-3/4 items-center justify-center">
       {/* Profile pic */}
 
-      <div className="rounded-xl overflow-hidden items-center justify-center place-items-center">
+      <div className="rounded-xl overflow-hidden items-center justify-center place-items-center w-full md:w-auto">
         <Image
           src="pfp.png"
           className="items-center rounded-xl justify-center"
